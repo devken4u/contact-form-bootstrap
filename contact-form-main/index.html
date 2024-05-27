@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div
+      class="container position-fixed p-5 top-0 start-0 end-0 d-flex justify-content-center"
+    >
+      <div class="text-white p-3 rounded-3 bg-dark-grey" id="notification">
+        <p class="fw-bold my-2">
+          <i class="bi bi-check-circle"></i> Message Sent!
+        </p>
+        <p class="my-2">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid bg-light-green p-5 d-flex overflow-auto"
+      style="height: 100svh"
+    >
+      <form
+        class="font-karla bg-white row text-dark-grey rounded-4 g-4 px-4 py-4 m-auto container needs-validation"
+        novalidate
+      >
+        <div class="col-12 m-0">
+          <p class="fw-bold fs-1 m-0">Contact Us</p>
+        </div>
+        <div class="col-lg-6 col-12">
+          <label for="firstname" class="form-label"
+            >First Name <span class="ast">&ast;</span></label
+          >
+          <input
+            type="text"
+            class="form-control border-medium-grey focus-medium-green"
+            id="firstname"
+            required
+          />
+          <div class="invalid-feedback">This field is required</div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <label
+            for="
+            lastname"
+            class="form-label"
+            >Last name <span class="ast">&ast;</span></label
+          >
+          <input
+            type="text"
+            class="form-control border-medium-grey focus-medium-green"
+            id="lastname"
+            required
+          />
+          <div class="invalid-feedback">This field is required</div>
+        </div>
+        <div class="col-12">
+          <label for="email" class="form-label"
+            >Email <span class="ast">&ast;</span></label
+          >
+          <input
+            type="email"
+            class="form-control border-medium-grey focus-medium-green"
+            id="email"
+            required
+          />
+          <div class="invalid-feedback">Please enter a valid email address</div>
+        </div>
+        <div class="col-12">
+          <label class="form-label"
+            >Query type <span class="ast">&ast;</span></label
+          >
+          <div class="row gy-2">
+            <div class="col-12 col-lg-6">
+              <div
+                class="form-check rounded-2 px-5 py-2 border border-medium-grey"
+              >
+                <input
+                  type="radio"
+                  class="form-check-input radio-green"
+                  name="query-type"
+                  id="general"
+                  required
+                />
+                <label for="general" class="form-check-label"
+                  >General Enquiry</label
+                >
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div
+                class="form-check rounded-2 px-5 py-2 border border-medium-grey"
+              >
+                <input
+                  type="radio"
+                  class="form-check-input radio-green"
+                  name="query-type"
+                  id="support"
+                  required
+                />
+                <label for="support" class="form-check-label"
+                  >Support Request</label
+                >
+              </div>
+            </div>
+            <input type="radio" name="query-type" style="display: none" />
+            <div class="invalid-feedback">Please select a query type</div>
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label"
+            >Message <span class="ast">&ast;</span></label
+          >
+          <textarea
+            id="message"
+            class="form-control border-medium-grey textarea-green"
+            rows="3"
+            required
+          ></textarea>
+          <div class="invalid-feedback">This field is required</div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input checkbox-green"
+              id="consent"
+              required
+            />
+            <label for="consent" class="form-check-label"
+              >I consent to being contaced by the team
+              <span class="ast">&ast;</span></label
+            >
+            <div class="invalid-feedback">
+              To submit this form, please consent to being contacted
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-green w-100 text-white">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
